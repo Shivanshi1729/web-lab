@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+    <script>
+        function changecase(s) {
+            if ('a' <= s && s <= 'z') return s.toUpperCase();
+            else return s.toLowerCase();
+        }
+
+        /* change the case of each character */
+        function swapcase(s) {
+            var ans = s.split('').map(changecase).join('');
+            return ans;
+        }
+
+        function main() {
+            input1 = document.getElementById("input1");
+            temp = swapcase(input1.value)
+            document.getElementById("output").value = temp;
+        }
+    </script>
+</head>
+
+<body>
+    Input: <input id="input1" type="text"> <br />
+    Output: <input id="output" type="text"> <br />
+    <input type="button" value="Swap Case" onclick="main()">
+</body>
+
+</html>

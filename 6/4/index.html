@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>4</title>
+    <script>
+        function main() {
+            var arr = document.getElementById('inp').value.split(" ").map(x => parseInt(x));
+            var target = Number(document.getElementById('target').value);
+            map = {}
+            arr.forEach(x => {
+                if (x in map) map[x]++;
+                else map[x] = 1;
+            });
+            ans = ""
+            for (var key in map) {
+                y = target - key;
+                if (y in map) {
+                    temp = "(" + key.toString() + "," + y.toString() + ")";
+                    ans = ans + temp;
+                }
+                delete map[key];
+            }
+            document.getElementById('output').innerHTML = ans;
+        }
+    </script>
+</head>
+
+<body>
+    Input: <br>
+    Array: <input type="text" id="inp" placeholder="Enter space separated array here"> <br>
+    Target: <input type="number" id="target" placeholder="Enter target sum here"> <br>
+    Output: <label id="output"></label> <br>
+    <input type="button" onclick="main()" value="Solve">
+</body>
+
+</html>

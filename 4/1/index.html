@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>1</title>
+    <script>
+        function capitalize_word(string) {
+            var arr = string.split(" ");
+            var ans = ""
+            for (let i of arr) {
+                ans += i.charAt(0).toUpperCase() + i.slice(1) + " ";
+            }
+            return ans;
+        }
+        function main() {
+            input1 = document.getElementById("input1");
+            temp = capitalize_word(input1.value)
+            document.getElementById("output").value = temp;
+        }
+    </script>
+</head>
+
+<body>
+    Input: <input id="input1" type="text"> <br />
+    Output: <input id="output" type="text"> <br />
+    <input type="button" value="Capitalize" onclick="main()">
+</body>
+
+</html>

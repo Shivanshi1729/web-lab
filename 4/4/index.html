@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>4</title>
+    <style>
+        table {
+            font-size: smaller;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+        /* return a map of each character count */
+        function func1(s) {
+            const m = new Map();
+            for (let i = 0; i < s.length; i++) {
+                if (m.has(s[i])) m.set(s[i], m.get(s[i]) + 1);
+                else m.set(s[i], 1);
+            }
+            return m;
+        }
+        function main() {
+            input1 = document.getElementById("input1");
+            const m = func1(input1.value);
+            tbody = document.getElementById('characters');
+            tbody.innerHTML = "";
+            for (const [key, value] of m) {
+                console.log(key + ' = ' + value)
+                row = document.createElement('tr');
+                h1 = document.createElement('td'); h1.innerHTML = key;
+                h2 = document.createElement('td'); h2.innerHTML = value;
+                row.appendChild(h1); row.appendChild(h2);
+                tbody.appendChild(row);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Input: <input id="input1" type="text">
+    <input type="button" value="Count" onclick="main()">
+    <table>
+        <thead>
+            <tr>
+                <th>Character</th>
+                <th>Occurrence</th>
+            </tr>
+        </thead>
+        <tbody id="characters">
+            <tr>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

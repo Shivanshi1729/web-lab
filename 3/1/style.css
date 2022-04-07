@@ -1,0 +1,19 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#form1 {
+    background-color: #99ffff;
+    padding: 10px;
+    max-width: 280px;
+    margin: auto;
+}
+
+label {
+  display: inline-block;
+  width: 80px;
+}
+
+label, input {
+  margin: 3px;
+}

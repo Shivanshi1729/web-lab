@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>3</title>
+    <script>
+        function isEvil(n) {
+            c = 0;
+            t = 1;
+            while (n) {
+                if (n & 1) c++;
+                n = n >> 1;
+            }
+            if (c & 1) return false;
+            else return true;
+        }
+        function evil() {
+            n = Number(document.getElementById('input1').value);
+            if (isNaN(n)) {
+                alert("Enter a valid number")
+                return;
+            }
+            if (n <= 2 || n >= 100) {
+                document.getElementById('output').innerHTML = "Number out of Range";
+                return;
+            }
+            if (isEvil(n)) {
+                document.getElementById('output').innerHTML = "Evil Number";
+            } else {
+                document.getElementById('output').innerHTML = "Not and Evil number";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Input: <input id="input1" type="text"> <br>
+    Output: <label id="output"></label> <br>
+    <input type="button" value="Check" onclick="evil()">
+</body>
+
+</html>

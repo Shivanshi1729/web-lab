@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>2</title>
+    <script>
+        function main() {
+            var arr = document.getElementById('input').value.split(" ").map(x => parseInt(x));
+            let ptr = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < 0) {
+                    var temp = arr[i];
+                    arr[i] = arr[ptr];
+                    arr[ptr] = temp;
+                    ptr++;
+                }
+            }
+            document.getElementById('output').innerHTML = arr.toString()
+        }
+    </script>
+</head>
+
+<body>
+    Input: <input type="text" id="input" placeholder="Enter space separated array..."><br>
+    Output: <label id="output"></label> <br>
+    <input type="button" onclick="main()" value="Convert">
+</body>
+
+</html>

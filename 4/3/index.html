@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+    <script>
+        function isVowel(c) {
+            return ['a', 'e', 'i', 'o', 'u'].includes(c.toLowerCase());
+        }
+        function indexOfLeftVowel(str) {
+            for (var i = str.length - 1; i >= 0; i--) {
+                if (isVowel(str[i])) return i;
+            }
+            return i;
+        }
+        function reverseNo(x) {
+            if (Number.isNaN(Number(x)) || !Number.isInteger(Number(x))) {
+                alert("Enter a valid number!");
+                return;
+            }
+            var ans = 0;
+            while (x > 0) {
+                ans = ans * 10 + x % 10;
+                x = Math.floor(x / 10);
+            }
+            return ans;
+        }
+        function main() {
+            input1 = document.getElementById("input1");
+            temp = indexOfLeftVowel(input1.value)
+            document.getElementById("output1").value = temp;
+        }
+        function main2() {
+            input1 = document.getElementById("input2");
+            temp = reverseNo(input2.value)
+            document.getElementById("output2").value = temp;
+        }
+    </script>
+</head>
+
+<body>
+    Input: <input id="input1" type="text"> <br />
+    Output: <input id="output1" type="text"> <br />
+    <input type="button" value="Index of Left Vowel" onclick="main()"> <br />
+    <hr />
+    Input: <input id="input2" type="text"> <br />
+    Output: <input id="output2" type="text"> <br />
+    <input type="button" value="Reverse Number" onclick="main2()">
+</body>
+
+</html>

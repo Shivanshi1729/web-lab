@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>3</title>
+    <script>
+        function main() {
+            n = document.getElementById('input').value
+            flag = false;
+            count = 0;
+            for (i = 0; i < n.length; i++) {
+                if (!flag && n[i] == '0') flag = true;
+                else if (flag && n[i] == '0' && n[i - 1] == '1') count++;
+            }
+            document.getElementById('output').innerHTML = count;
+        }
+    </script>
+</head>
+
+<body>
+    Input: <input type="text" id="input" placeholder="Enter binary string here"> <br>
+    Output: <label id="output"></label> <br>
+    <input type="button" value="Count" onclick="main()">
+</body>
+
+</html>

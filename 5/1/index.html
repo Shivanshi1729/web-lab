@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>1</title>
+    <script>
+        function string_chop(str, n) {
+            if (n == undefined) return [str];
+            const a = [];
+            for (i = n; i < str.length; i += n) {
+                a.push(str.substring(i - n, i));
+            }
+            if (i >= str.length) a.push(str.substring(i - n));
+            return a;
+        }
+        console.log(string_chop('welcome'))
+        console.log(string_chop('welcome', 1))
+        console.log(string_chop('welcome', 2))
+        console.log(string_chop('welcome', 3))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

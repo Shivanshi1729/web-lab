@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>5</title>
+    <script>
+        function main() {
+            var arr1 = document.getElementById("input1").value.split(" ").map(x => parseInt(x));
+            var arr2 = document.getElementById("input2").value.split(" ").map(x => parseInt(x));
+            var arr3 = []
+            var i = 0, j = 0;
+            while (i < arr1.length && j < arr2.length) {
+                if (arr1[i] < arr2[j]) arr3.push(arr1[i++]);
+                else arr3.push(arr2[j++]);
+            }
+            while (i < arr1.length) arr3.push(arr1[i++]);
+            while (j < arr2.length) arr3.push(arr2[j++]);
+            arr1 = arr3.slice(0, arr1.length);
+            arr2 = arr3.slice(arr1.length);
+            document.getElementById('arr1').innerHTML = arr1.toString();
+            document.getElementById('arr2').innerHTML = arr2.toString();
+        }
+    </script>
+</head>
+
+<body>
+    Input: <br />
+    Array1: <input type="text" id="input1"> <br />
+    Array2: <input type="text" id="input2"> <br />
+    Output: <br />
+    Array1: <label id="arr1"></label> <br />
+    Array2: <label id="arr2"></label> <br />
+    <input type="button" onclick="main()" value="Solve">
+</body>
+
+</html>

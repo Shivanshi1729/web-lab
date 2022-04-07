@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>2</title>
+    <script>
+        function helper(str) {
+            if (str=='') return str;
+            return str[0].toUpperCase() + str.substring(1).toLowerCase();
+        }
+        function sentenceCase(str) {
+            return str.split(' ').map(helper).join(' ');
+        }
+        console.log(sentenceCase("hOW aRe YOU"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
