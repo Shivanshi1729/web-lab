@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <div id="ans">
+
+    </div>
+    <script>
+        d = document.getElementById('ans')
+        var a = new Date();
+        day_arr = ['Sunday', 'Monday', 'Tuesday', 'Thursday', 'Friday', 'Saturday'];
+        var ans = 'Today is : ' + day_arr[a.getDay()] + '<br>Current time is : ';
+        if (a.getHours() > 12) {
+            ans = ans + (a.getHours() - 12) + ' PM';
+        } else {
+            ans = ans + a.getHours() + ' AM';
+        }
+        ans = ans + ' : ' + a.getMinutes() + ' : ' + a.getSeconds();
+        d.innerHTML = ans;
+    </script>
+</body>
+
+</html>

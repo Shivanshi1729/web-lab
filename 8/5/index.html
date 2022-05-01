@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        function getDate() {
+            date = new Date();
+            format = document.getElementById("format").value;
+            delimiter = document.getElementById("delimiter").value;
+            var ans = '';
+            month = date.getMonth() + 1
+            month = (month < 10) ? '0' + month.toString() : month.toString();
+            datee = (date.getDate() < 10) ? '0' + date.getDate().toString() : date.getDate().toString();
+
+            if (format == '1') {
+                ans = month + delimiter + datee + delimiter + date.getFullYear();
+            }
+            else if (format = '2') {
+                ans = datee + delimiter + month + delimiter + date.getFullYear();
+            }
+            document.getElementById('ans').innerHTML = ans;
+        }
+    </script>
+</head>
+
+<body>
+    Choose a format:
+
+    <select name="format" id="format">
+        <option value="1">mm-dd-yyyy</option>
+        <option value="2">dd-mm-yyyy</option>
+    </select>
+
+    Delimiter:
+
+    <select name="delimiter" id="delimiter">
+        <option value="-">-</option>
+        <option value="/">/</option>
+    </select>
+
+    <button onclick="getDate()">Get Date</button>
+    <div id="ans"></div>
+</body>
+
+</html>

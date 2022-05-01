@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Validation</title>
+    <script>
+      let form = document.forms["form1"];
+      function validate() {
+        let name = form["name"].value;
+        let email = form["email"].value;
+        let phone = form["phone"].value;
+        let pin = form["pin"].value;
+        let aadhar = form["aadhar"].value;
+        let enrol = form["enrol"].value;
+        let logs = document.getElementById("logs");
+
+        // name
+        if (!/([A-Z])\w+/.test(name)) {
+          form.name.focus();
+          logs.textContent = "Invalid name format";
+          return false;
+        }
+
+        // email
+        if (!/^[\w.+\-]+@gmail\.com$/.test(email)) {
+          form.email.focus();
+          logs.textContent = "Enter valid gmail address";
+          return false;
+        }
+
+        // phone
+        if (phone.length != 13) {
+          form.phone.focus();
+          logs.textContent = "Incorrect length phone number";
+          return false;
+        }
+        if (!/^\+91\d+$/.test(phone)) {
+          form.phone.focus();
+          logs.textContent = "Invalid phone number";
+          return false;
+        }
+
+        // pincode
+        if (pin.length != 6) {
+          form.pin.focus();
+          logs.textContent = "Invalid pincode";
+          return false;
+        }
+
+        // aadhar
+        if (aadhar.length != 12) {
+          form.aadhar.focus();
+          logs.textContent = "Invalid length aadhar number";
+          return false;
+        }
+
+        // enrolment
+        if (enrol.length != 8) {
+          form.enrol.focus();
+          logs.textContent = "Invalid enrolment number";
+          return false;
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .container {
+        margin: 0 20% 0 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+      }
+      .container * {
+        width: 100%;
+        height: 25px;
+        margin-top: 5px;
+      }
+      #submit {
+        width: 10%;
+        min-width: 100px;
+        margin-left: 40%;
+      }
+      input {
+        padding: 2px 5px 2px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form name="form1" onsubmit="return(validate())">
+        <h1>Form validation</h1>
+        <input type="text" id="name" placeholder="Enter name" />
+        <input type="email" id="email" placeholder="Enter email here" />
+        <input type="text" id="phone" placeholder="Phone number" />
+        <input type="number" id="pin" placeholder="Pin code" />
+        <input type="text" id="aadhar" placeholder="Aadhar number" />
+        <input type="text" id="enrol" placeholder="Enrolment number" />
+        <button id="submit" type="submit">Submit</button>
+        <div id="logs"></div>
+      </form>
+    </div>
+  </body>
+</html>

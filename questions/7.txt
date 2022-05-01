@@ -1,0 +1,7 @@
+Validate following input values in form using javascript
+i.	Name
+ii.	Email Id
+iii.	Phone Number
+iv.	Aadhar Number
+v.	Pin Code
+vi.	Enrollment Number
