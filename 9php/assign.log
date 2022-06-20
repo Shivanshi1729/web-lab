@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.10.6)  20 JUN 2022 08:48
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2021.10.6)  20 JUN 2022 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -525,32 +525,64 @@ File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 ]) [2]
 File: 1/out.png Graphic file (type bmp)
 <1/out.png>
- [3] (./2/index.php) [4] (./2/input.txt) (./2/output.txt) [5]
-(./3/index.php) (./3/login.php [6]) (./3/logout.php) (./3/article1.php [7])
-(./3/article2.php) [8]
+ [3] (./2/index.php) (./2/input.txt) (./2/output.txt) [4]
+(./3/index.php) (./3/login.php [5]) (./3/logout.php) (./3/article1.php [6])
+(./3/article2.php) [7]
+File: 3/out.png Graphic file (type bmp)
+<3/out.png>
+File: 3/out2.png Graphic file (type bmp)
+<3/out2.png>
+File: 3/out3.png Graphic file (type bmp)
+<3/out3.png>
+File: 3/out4.png Graphic file (type bmp)
+<3/out4.png>
 
-LaTeX Warning: File `3/out.png' not found on input line 98.
+Overfull \vbox (75.15071pt too high) has occurred while \output is active []
 
-! Unable to load picture or PDF file '3/out.png'.
-<to be read again> 
-                   }
-l.98   \includegraphics[width=10cm]{3/out.png}
-                                              
-? 
-! Emergency stop.
-<to be read again> 
-                   }
-l.98   \includegraphics[width=10cm]{3/out.png}
-                                              
-End of file on the terminal!
 
- 
+[8] (./4/index.php [9])
+File: 4/out.png Graphic file (type bmp)
+<4/out.png>
+ [10] (./5/index.php [11]) (./5/insert.php) [12]
+File: 5/out.png Graphic file (type bmp)
+<5/out.png>
+File: 5/out2.png Graphic file (type bmp)
+<5/out2.png>
+File: 5/out3.png Graphic file (type bmp)
+<5/out3.png>
+
+[13] (./6/index.php) (./6/update.php [14]) [15]
+File: 6/out.png Graphic file (type bmp)
+<6/out.png>
+File: 6/out2.png Graphic file (type bmp)
+<6/out2.png>
+File: 6/out3.png Graphic file (type bmp)
+<6/out3.png>
+ [16] (./7/index.php)
+(./7/delete.php [17]) [18]
+File: 7/out.png Graphic file (type bmp)
+<7/out.png>
+File: 7/out2.png Graphic file (type bmp)
+<7/out2.png>
+File: 7/out3.png Graphic file (type bmp)
+<7/out3.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
+ [19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
+ (./assign.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 179.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
+Package rerunfilecheck Info: File `assign.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
+ ) 
 Here is how much of TeX's memory you used:
- 15027 strings out of 479819
- 279992 string characters out of 5895846
- 1052460 words of memory out of 5000000
- 31942 multiletter control sequences out of 15000+600000
- 532946 words of font info for 56 fonts, out of 8000000 for 9000
+ 15158 strings out of 479819
+ 281768 string characters out of 5895846
+ 1057666 words of memory out of 5000000
+ 32073 multiletter control sequences out of 15000+600000
+ 532954 words of font info for 57 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  43i,6n,67p,480b,3578s stack positions out of 5000i,500n,10000p,200000b,80000s
-Output written on assign.pdf (8 pages).
+
+Output written on assign.pdf (19 pages).
